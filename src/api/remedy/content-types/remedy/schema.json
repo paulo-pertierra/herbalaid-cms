@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "remedies",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "article"
+    "singularName": "remedy",
+    "pluralName": "remedies",
+    "displayName": "remedy"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,19 +32,10 @@
       "multiple": false,
       "pluginOptions": {
         "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
-    "comment": {
-      "pluginOptions": {
-        "i18n": {
           "localized": true
         }
       },
-      "type": "customField",
-      "customField": "plugin::comments.comments"
+      "required": true
     },
     "content": {
       "pluginOptions": {
@@ -52,7 +43,14 @@
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
+    },
+    "remedy_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::remedy-tag.remedy-tag",
+      "inversedBy": "remedies"
     }
   }
 }

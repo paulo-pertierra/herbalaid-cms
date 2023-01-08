@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
-  host: env('HOST', 'https://herbalaid-cms.onrender.com/'),
-  port: env.int('PORT', 1337),
-  url: env("PUBLIC_URL", "https://herbalaid-cms.onrender.com/"),
+  host: env('HOST'),
+  port: env.int('PORT'),
+  url: env("PUBLIC_URL"),
   app: {
     keys: env.array('APP_KEYS'),
   },

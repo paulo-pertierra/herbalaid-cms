@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   // ...
 
   "fuzzy-search": {
-    enabled: true,
+    enabled: false,
     config: {
       contentTypes: [
         {
