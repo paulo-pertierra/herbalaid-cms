@@ -1,8 +1,8 @@
 module.exports = ({ env }) => ({
-  // ...
-
+  
+  // Fuzzy Search API
   "fuzzy-search": {
-    enabled: false,
+    enabled: true,
     config: {
       contentTypes: [
         {
@@ -38,5 +38,17 @@ module.exports = ({ env }) => ({
     },
   },
 
-  // ...
+  // SendGrid API
+  email: {
+    config: {
+      provider: env('MAIL_PROVIDER'),
+      providerOptions: {
+        apiKey: env('MAIL_API'),
+      },
+      settings: {
+        defaultFrom: env('MAIL_DEF_FROM'),
+        defaultReplyTo: env('MAIL_DEF_TO'),
+      },
+    },
+  },
 });

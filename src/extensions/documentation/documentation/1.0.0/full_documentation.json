@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-01-10T14:11:41.902Z"
+    "x-generation-date": "2023-01-11T13:55:53.290Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -91,6 +91,7 @@
         "required": [
           "title",
           "display_photo",
+          "author",
           "locale"
         ],
         "type": "object",
@@ -109,8 +110,10 @@
             ],
             "example": "string or id"
           },
-          "comment": {},
           "content": {
+            "type": "string"
+          },
+          "author": {
             "type": "string"
           },
           "locale": {
@@ -127,7 +130,8 @@
           "data": {
             "required": [
               "title",
-              "display_photo"
+              "display_photo",
+              "author"
             ],
             "type": "object",
             "properties": {
@@ -145,8 +149,10 @@
                 ],
                 "example": "string or id"
               },
-              "comment": {},
               "content": {
+                "type": "string"
+              },
+              "author": {
                 "type": "string"
               },
               "locale": {
@@ -786,8 +792,10 @@
               }
             }
           },
-          "comment": {},
           "content": {
+            "type": "string"
+          },
+          "author": {
             "type": "string"
           },
           "createdAt": {
@@ -1734,8 +1742,10 @@
                   }
                 }
               },
-              "comment": {},
               "content": {
+                "type": "string"
+              },
+              "author": {
                 "type": "string"
               },
               "createdAt": {
@@ -2686,8 +2696,10 @@
                   }
                 }
               },
-              "comment": {},
               "content": {
+                "type": "string"
+              },
+              "author": {
                 "type": "string"
               },
               "createdAt": {
@@ -3669,8 +3681,10 @@
                   }
                 }
               },
-              "comment": {},
               "content": {
+                "type": "string"
+              },
+              "author": {
                 "type": "string"
               },
               "createdAt": {
@@ -4621,8 +4635,10 @@
                   }
                 }
               },
-              "comment": {},
               "content": {
+                "type": "string"
+              },
+              "author": {
                 "type": "string"
               },
               "createdAt": {
