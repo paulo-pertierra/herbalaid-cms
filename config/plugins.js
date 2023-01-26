@@ -6,8 +6,8 @@ module.exports = ({ env }) => ({
     config: {
       contentTypes: [
         {
-          uid: "api::article.article",
-          modelName: "article",
+          uid: "api::remedy.remedy",
+          modelName: "remedy",
           transliterate: false,
           queryConstraints: {
             where: {
@@ -24,11 +24,15 @@ module.exports = ({ env }) => ({
             limit: 15,
             keys: [
               {
-                name: "title",
+                name: "name",
                 weight: 200,
               },
               {
-                name: "content",
+                name: "fuzzy_tags",
+                weight: 150,
+              },
+              {
+                name: "remedy_tags",
                 weight: 150,
               },
             ],
@@ -37,7 +41,6 @@ module.exports = ({ env }) => ({
       ],
     },
   },
-
   // SendGrid API
   email: {
     config: {
@@ -53,18 +56,18 @@ module.exports = ({ env }) => ({
   },
 
   //cloudinary
-  upload: {
-    config: {
-      provider: 'cloudinary',
-      providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET'),
-      },
-      actionOptions: {
-        upload: {},
-        delete: {},
-      },
-    },
-  },
+//   upload: {
+//     config: {
+//       provider: 'cloudinary',
+//       providerOptions: {
+//         cloud_name: env('CLOUDINARY_NAME'),
+//         api_key: env('CLOUDINARY_KEY'),
+//         api_secret: env('CLOUDINARY_SECRET'),
+//       },
+//       actionOptions: {
+//         upload: {},
+//         delete: {},
+//       },
+//     },
+//   },
 });
